@@ -1,0 +1,16 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^marbellavein.com
+RewriteRule (.*) http://www.marbellavein.com/$1 [R=301,L]
+
+SetEnv PHP_VER 5
+ErrorDocument 400 http://www.marbellavein.com/
+ErrorDocument 401 http://www.marbellavein.com/
+ErrorDocument 403 http://www.marbellavein.com/
+ErrorDocument 404 http://www.marbellavein.com/
+ErrorDocument 500 http://www.marbellavein.com/
+
+## STOP REFERRER SPAM
+RewriteCond %{HTTP_REFERER} semalt\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} best-seo-solution\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} best-seo-offer\.com [NC]
+RewriteRule .* - [F]
