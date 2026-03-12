@@ -1092,6 +1092,8 @@ img {
   /* Mobile Nav */
   .nav-toggle {
     display: flex;
+    position: relative;
+    z-index: 1001;
   }
 
   .nav-menu {
