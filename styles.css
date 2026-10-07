@@ -1,5 +1,5 @@
 /* ============================================
-   Dr. Dhobb — Vascular Surgery Marbella
+   The Marbella Vein Clinic — Marbella
    Premium Single-Page Website
    ============================================ */
 
@@ -186,21 +186,25 @@ img {
   display: flex;
   flex-direction: column;
   text-decoration: none;
+  line-height: 1.25;
 }
 
 .logo-name {
   font-family: var(--font-heading);
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--cream);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
 .logo-title {
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
+  margin-top: 4px;
+  font-size: 0.66rem;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--gold);
+  white-space: nowrap;
 }
 
 .nav-menu {
@@ -300,6 +304,7 @@ img {
   justify-content: center;
   text-align: center;
   overflow: hidden;
+  padding: 128px 0 112px;
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 50%, var(--navy-light) 100%);
 }
 
@@ -329,7 +334,7 @@ img {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  max-width: 960px;
   padding: 0 24px;
 }
 
@@ -351,6 +356,15 @@ img {
   color: var(--cream);
   margin-bottom: 16px;
   letter-spacing: -0.01em;
+}
+
+.hero-postnominals {
+  font-size: 0.42em;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  white-space: nowrap;
 }
 
 .hero-credentials {
@@ -506,10 +520,22 @@ img {
 }
 
 .badge-text {
+  display: block;
+  margin-top: 6px;
+  line-height: 1.5;
   font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.about-lead {
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--cream);
+  margin-bottom: 24px;
 }
 
 .about-text {
@@ -552,19 +578,25 @@ img {
   background: var(--navy-mid);
 }
 
+/* Five treatments: three across, then two wider cards */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 32px;
   margin-bottom: 60px;
 }
 
 .service-card {
+  grid-column: span 2;
   background: var(--navy-light);
   border: 1px solid rgba(200, 169, 110, 0.08);
   border-radius: 12px;
   padding: 40px 32px;
   transition: all var(--transition);
+}
+
+.service-card:nth-child(n+4) {
+  grid-column: span 3;
 }
 
 .service-card:hover {
@@ -614,95 +646,10 @@ img {
 }
 
 /* ============================================
-   WHY CHOOSE
-   ============================================ */
-.why-choose {
-  background: var(--navy);
-}
-
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  margin-bottom: 80px;
-}
-
-.why-card {
-  padding: 40px 32px;
-  border-radius: 12px;
-  background: rgba(26, 42, 68, 0.5);
-  border: 1px solid rgba(200, 169, 110, 0.06);
-  transition: all var(--transition);
-}
-
-.why-card:hover {
-  border-color: rgba(200, 169, 110, 0.2);
-}
-
-.why-number {
-  font-family: var(--font-heading);
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: rgba(200, 169, 110, 0.15);
-  margin-bottom: 16px;
-  line-height: 1;
-}
-
-.why-card h3 {
-  font-family: var(--font-heading);
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--cream);
-  margin-bottom: 12px;
-}
-
-.why-card p {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
-}
-
-/* Affiliations */
-.affiliations {
-  text-align: center;
-  padding: 48px;
-  background: var(--navy-mid);
-  border-radius: 12px;
-  border: 1px solid rgba(200, 169, 110, 0.08);
-}
-
-.affiliations-title {
-  font-family: var(--font-heading);
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 24px;
-}
-
-.affiliations-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-}
-
-.affiliations-list span {
-  padding: 8px 16px;
-  background: rgba(200, 169, 110, 0.06);
-  border: 1px solid rgba(200, 169, 110, 0.1);
-  border-radius: 100px;
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-  white-space: nowrap;
-}
-
-/* ============================================
    PATIENT EXPERIENCE
    ============================================ */
 .experience {
-  background: var(--navy-mid);
+  background: var(--navy);
 }
 
 .timeline {
@@ -802,7 +749,7 @@ img {
    CONTACT
    ============================================ */
 .contact {
-  background: var(--navy);
+  background: var(--navy-mid);
 }
 
 .contact-grid {
@@ -896,7 +843,7 @@ img {
    FOOTER
    ============================================ */
 .footer {
-  background: var(--navy-mid);
+  background: var(--navy);
   border-top: 1px solid rgba(200, 169, 110, 0.08);
   padding: 80px 0 40px;
 }
@@ -915,15 +862,18 @@ img {
   margin-bottom: 8px;
 }
 
-.footer-brand p {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
+.footer-clinic {
+  font-size: 0.66rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
 }
 
-.footer-clinic {
-  color: var(--gold) !important;
-  font-size: 0.85rem !important;
-  margin-top: 8px;
+.footer-doctor {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 .footer h4 {
@@ -1051,45 +1001,8 @@ img {
 /* ============================================
    RESPONSIVE
    ============================================ */
-@media (max-width: 1024px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
-
-  .about-image {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .why-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  .section {
-    padding: 80px 0;
-  }
-
-  .section-header {
-    margin-bottom: 48px;
-  }
-
-  /* Mobile Nav */
+/* Hamburger menu up to small laptops: the full menu needs ~1100px next to the clinic name */
+@media (max-width: 1100px) {
   .nav-toggle {
     display: flex;
     position: relative;
@@ -1124,8 +1037,56 @@ img {
     margin-left: 0;
     margin-top: 16px;
   }
+}
+
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .about-image {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-card,
+  .service-card:nth-child(n+4) {
+    grid-column: auto;
+  }
+
+  .service-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 0;
+  }
+
+  .section-header {
+    margin-bottom: 48px;
+  }
 
   /* Hero */
+  .hero {
+    padding: 112px 0 104px;
+  }
+
   .hero-actions {
     flex-direction: column;
     align-items: center;
@@ -1149,15 +1110,6 @@ img {
   }
 
   .aesthetic-banner {
-    padding: 32px 24px;
-  }
-
-  /* Why */
-  .why-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .why-card {
     padding: 32px 24px;
   }
 
@@ -1196,21 +1148,41 @@ img {
     grid-template-columns: 1fr;
     gap: 32px;
   }
+}
 
-  /* Affiliations */
-  .affiliations {
-    padding: 32px 20px;
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: min(2.4rem, 7.6vw);
   }
 
-  .affiliations-list span {
-    font-size: 0.75rem;
-    padding: 6px 12px;
+  .hero-name {
+    white-space: nowrap;
+  }
+
+  .hero-postnominals {
+    display: block;
+    margin-top: 12px;
+    font-size: 0.5em;
+    letter-spacing: 0.22em;
+  }
+
+  .pn-sep {
+    display: none;
+  }
+
+  .hero-credentials {
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-title {
-    font-size: 2.2rem;
+  .logo-name {
+    font-size: 1.08rem;
+  }
+
+  .logo-title {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
   }
 
   .hero-subtitle {

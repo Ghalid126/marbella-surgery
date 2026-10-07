@@ -1,5 +1,5 @@
 /* ============================================
-   Dr. Dhobb — Vascular Surgery Marbella
+   The Marbella Vein Clinic — Marbella
    Script: Navigation, Language Toggle, Animations
    ============================================ */
 
@@ -86,9 +86,9 @@
 
     // Update page title
     if (currentLang === 'es') {
-      document.title = 'Dr. Francis M. Dhobb | Cirujano Vascular Marbella, Costa del Sol';
+      document.title = 'The Marbella Vein Clinic | Tratamiento de Varices en Marbella, Costa del Sol';
     } else {
-      document.title = 'Dr. Francis M. Dhobb | Vascular Surgeon Marbella, Costa del Sol';
+      document.title = 'The Marbella Vein Clinic | Vein Treatment in Marbella, Costa del Sol';
     }
   });
 
